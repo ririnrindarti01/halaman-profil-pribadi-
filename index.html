@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Profil Pribadi</title>
+    <!-- FontAwesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <main class="container">
+        <!-- Breadcrumb / Navigasi Lokasi Halaman -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">User</a></li>
+                <li aria-current="page">User Profile</li>
+            </ol>
+        </nav>
+
+        <div class="profile-layout">
+
+            <!-- Kolom Kiri: Sidebar Informasi Profil Utama & Sosial Media -->
+            <aside class="sidebar">
+
+                <!-- Kartu Profil Utama -->
+                <section class="card profile-card">
+                    <header class="profile-header">
+                        <img src="./image/WhatsApp Image 2025-10-23 at 16.05.08 (10).jpeg" alt="Foto Profil ririn Rindarti" class="avatar">
+                        <h2>Ririn Rindarti </h2>
+                        <p class="job-title">Frontend developer</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Bandung ,indonesia</p>
+                    </header>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary" onclick="followUser()">Follow</button>
+                        <button type="button" class="btn btn-outline" onclick="sendMessage()">Message</button>
+                    </div>
+                </section>
+
+                <!-- Kartu Tautan Sosial Media -->
+                <section class="card social-card" aria-label="Tautan Media Sosial">
+                    <ul class="social-list">
+                        <li>
+                            <span><i class="fas fa-globe text-primary" aria-hidden="true"></i> Website</span>
+                            <a href="https://ririn.rindarti.com" target="_blank" rel="noopener">https://ririn.rindarti.com</a>
+                        </li>
+                        <li>
+                            <span><i class="fab fa-github" aria-hidden="true"></i> Github</span>
+                            <span class="text-muted">ririnrindarti01</span>
+                        </li>
+                        <li>
+                            <span><i class="fab fa-twitter text-info" aria-hidden="true"></i> Twitter</span>
+                            <span class="text-muted">@ririnrindarti</span>
+                        </li>
+                        <li>
+                            <span><i class="fab fa-instagram text-danger" aria-hidden="true"></i> Instagram</span>
+                            <span class="text-muted">ririnrindartii</span>
+                        </li>
+                        <li>
+                            <span><i class="fab fa-facebook text-primary" aria-hidden="true"></i> Facebook</span>
+                            <span class="text-muted">ririn rindarti</span>
+                        </li>
+                    </ul>
+                </section>
+
+            </aside>
+
+            <!--   Kolom Kanan: Detail Data Pengguna & Status Proyek -->
+            <section class="content-area">
+
+                <!-- Kartu Detail Bio / Kontak -->
+                <article class="card detail-card">
+                    <header>
+                        <h3 class="sr-only">Informasi Detail Kontak</h3>
+                    </header>
+                    <dl class="info-list">
+                        <div class="info-row">
+                            <dt>Full Name</dt>
+                            <dd>Ririn Rindarti</dd>
+                        </div>
+                        <div class="info-row">
+                            <dt>Email</dt>
+                            <dd><a href="ririn.rindarti01@gmail.com">ririn.rindarti@gmail.com</a></dd>
+                        </div>
+                        <div class="info-row">
+                            <dt>Phone</dt>
+                            <dd><a href="083129254324">083129254324</a></dd>
+                        </div>
+                        <div class="info-row">
+                            <dt>Address</dt>
+                            <dd>Bandung city west java, indonesia </dd>
+                        </div>
+                    </dl>
+                    <footer>
+                        <button type="button" class="btn btn-info">Edit</button>
+                    </footer>
+                </article>
+
+                <!-- Section Status Proyek -->
+                <div class="status-grid">
+
+                    <!-- Progress Card 1 -->
+                    <article class="card status-card">
+                        <header>
+                            <h3><i class="fas fa-tasks text-info" aria-hidden="true"></i>Skill</h3>
+                        </header>
+                        <div class="progress-group">
+                            <div class="progress-item">
+                                <label for="prog-web-design-1">HTML</label>
+                                <progress id="prog-web-design-1" max="100" value="80">80%</progress>
+                            </div>
+                            <div class="progress-item">
+                                <label for="prog-markup-1">Css</label>
+                                <progress id="prog-markup-1" max="100" value="72">72%</progress>
+                            </div>
+                            <div class="progress-item">
+                                <label for="prog-onepage-1">Java Script</label>
+                                <progress id="prog-onepage-1" max="100" value="89">89%</progress>
+                            </div>
+                            <div class="progress-item">
+                                <label for="prog-mobile-1">React</label>
+                                <progress id="prog-mobile-1" max="100" value="80">80%</progress>
+                            </div>
+                            <div class="progress-item">
+                                <label for="prog-mobile-1">Vue.js</label>
+                                <progress id="prog-mobile-1" max="100" value="80">80%</progress>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Progress Card 2 -->
+                    <article class="card status-card">
+                        <header>
+                            <h3><i class="fas fa-tasks text-info" aria-hidden="true"></i> Language</h3>
+                        </header>
+                        <div class="progress-group">
+                            <div class="progress-item">
+                                <label for="prog-web-design-2">indonesia</label>
+                                <progress id="prog-web-design-2" max="100" value="80">80%</progress>
+                            </div>
+                            <div class="progress-item">
+                                <label for="prog-markup-2">inggris</label>
+                                <progress id="prog-markup-2" max="100" value="72">72%</progress>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
